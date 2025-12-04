@@ -1,27 +1,46 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en">
 <head>
-<title>Prateek AI</title>
-<style>
-    body { font-family: Arial; background: #e8f0ff; text-align: center; padding: 50px; }
-    h1 { color: #0055cc; }
-    button {
-        padding: 12px 20px;
-        font-size: 18px;
-        border: none;
-        background: #0055cc;
-        color: white;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-    button:hover { background: #003d99; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prateek AI — Made by Prateek Maurya</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Welcome to Prateek AI 🤖</h1>
-    <p>Ask me anything!</p>
-    <button onclick="window.location.href='https://chat.openai.com';">
-        Start Chat
-    </button>
+  <div class="app">
+    <header class="topbar">
+      <div class="branding">
+        <div class="logo">🤖</div>
+        <div>
+          <h1>Prateek AI</h1>
+          <div class="subtitle">Made by Prateek Maurya — Class XII PCM helper</div>
+        </div>
+      </div>
+      <div class="info">Blue • Professional theme</div>
+    </header>
+
+    <main class="main">
+      <div id="chat" class="chat"></div>
+
+      <form id="composer" class="composer">
+        <input id="prompt" autocomplete="off" placeholder="Ask a question — e.g. 'Explain projectile motion with formula'"/>
+        <select id="model-select" title="Choose model">
+          <option value="gpt-4o-mini">gpt-4o-mini</option>
+          <option value="gpt-4o">gpt-4o</option>
+          <option value="gpt-3.5-turbo" selected>gpt-3.5-turbo</option>
+        </select>
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="notes">Note: Powered by OpenAI via your Vercel serverless function.</div>
+    </main>
+
+    <footer class="footer">
+      <small>Prateek AI — For learning & demo. © Prateek Maurya</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
